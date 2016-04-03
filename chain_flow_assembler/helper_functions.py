@@ -7,8 +7,13 @@ class Helper_Functions:
       self.asm  = assembler
 
    def  one_step( self, function, param1=0,parm2=0,parm3=0 ):       
-        self.asm.define_link("One_Step" , function, param1,param2,parm3)
-
+        self.asm.define_link("One_Step" , function, param1,parm2,parm3)
+	self.asm.foriegn_helper_functions[function] = function 
+   
+   def  code_step( self, function, param1=0,parm2=0,parm3= 0 ):	
+       self.asm.define_link("One_Step" , function, param1,parm2,parm3)
+       self.asm.foriegn_helper_functions[function] = function 
+       
    def  reset( self ):            
         self.asm.define_link("Reset" )
 
