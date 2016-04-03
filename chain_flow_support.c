@@ -11,6 +11,7 @@
 #include "cf_chain_flow_support.h"
 
 #include "cf_runtime_functions.h"
+#include "cf_external_functions.h"
 #include "cf_events.h"
 
 int blink_heart_beat( unsigned link_id, CF_FUN_AUX param_1, unsigned param_2,
