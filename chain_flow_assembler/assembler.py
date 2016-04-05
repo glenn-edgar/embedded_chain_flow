@@ -31,6 +31,12 @@ class CF_Assembler:
        self.links.append({ "opcode":self.opcodes.get_opcode(opcode_name),"param1":param1,"param2":param2,"param3":param3,"param4":param4 })
        self.link_number = self.link_number+1
 
+   def define_link_a( self, opcode_name, param2 = 0, param3 = 0, param4 = 0 ):
+       if self.opcodes.has_key( opcode_name ) == False:
+           raise ValueError("improper opcode "+opcode_name )
+       self.links.append({ "opcode":self.opcodes.get_opcode(opcode_name),"param1":"NULL","param2":param2,"param3":param3,"param4":param4 })
+       self.link_number = self.link_number+1
+
    def end_chain( self ):
        self.chain_list.append(self.chain_name)
        self.cf_definition[self.chain_name] = self.links

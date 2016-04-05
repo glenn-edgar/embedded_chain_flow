@@ -18,10 +18,15 @@ This is the symbolic definitions of the chains
 
 
 #define  heart_beat   0
+#define  measure_die_temperature   1
 
 
 
 int pat_watch_dog(unsigned link_id, unsigned param_1,
+  unsigned param_2, unsigned param_3, unsigned event, unsigned data);
+
+
+int meaure_die_temperature(unsigned link_id, unsigned param_1,
   unsigned param_2, unsigned param_3, unsigned event, unsigned data);
 
 
