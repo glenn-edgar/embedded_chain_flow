@@ -62,7 +62,7 @@ void cf_send_event( unsigned event, unsigned data )
 int cf_rx_event( unsigned *event, unsigned *data )
 {
    int return_value;
-   CyGlobalIntEnable;
+   CyGlobalIntDisable;
    // add interrupt protoection
    if( event_number > 0 )
    {
@@ -77,7 +77,7 @@ int cf_rx_event( unsigned *event, unsigned *data )
    {
      return_value = 0;
    }
-   CyGlobalIntDisable;
+   CyGlobalIntEnable;
    return return_value;
 }
              

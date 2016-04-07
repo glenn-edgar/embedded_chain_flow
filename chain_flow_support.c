@@ -188,7 +188,6 @@ void cf_process_cf_event( unsigned event, unsigned event_data )
 {
    
    int i;
-
    for( i = 0; i < CHAIN_NUM; i++ )
    {
      if( chain_enable_for_event( i ) != 0 )
